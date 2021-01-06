@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-app {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: rgb(36, 40, 47);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.p-relative {
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.change-button {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    background-color: rgb(255, 152, 0);
+    outline: none;
+    color: rgb(245, 245, 245);
+    cursor: pointer;
+    border: 2px solid rgb(255, 152, 0);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, .25);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    transition: all .5s;
 }
 
-.App-link {
-  color: #61dafb;
+.change-button:hover {
+    background-color: rgb(245, 245, 245);
+    color: rgb(255, 152, 0);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.change-button i {
+    font-size: 25px;
+}
+
+.card-container {
+    display: grid;
+    min-width: 700px;
+    max-width: 700px;
+    min-height: 300px;
+    grid-template-columns: 300px 400px;
+    border-radius: 16px;
+    background-color: rgb(60, 62, 68);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 25%);
+}
+
+.img-container img {
+    object-fit: cover;
+    border-radius: 16px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.img-container {
+    height: 300px;
+    width: 300px;
+}
+
+.info-container {
+    padding: 1em;
+    padding-left: 1.5em;
+}
+
+.name-title {
+    margin: 0;
+    color: rgb(255, 152, 0);
+    font-weight: 900;
+    font-size: 32px;
+    letter-spacing: 2.5px;
+}
+
+.info-text {
+    color: rgb(245, 245, 245);
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.info-text.first {
+    margin-top: 1px;
+    margin-bottom: 2.2em;
+    font-weight: 700;
+}
+
+.info-text-title {
+    color: rgb(158, 158, 158);
+    margin: 0;
+    margin-top: 1.5em;
+    margin-bottom: 0.3em;
+
+}
+
+.mr-2 {
+    margin-right: 8px;
+}
+
+@media only screen and (max-width: 700px) {
+    .container-app {
+        min-height: 100vh;
+        max-height: 100vh;
+        max-width: 100vw;
+        min-width: 100vw;
+    }
+    .card-container{
+      display: flex;
+      flex-direction: column;
+      min-width: 80%;
+      max-width: 80%;
+    }
+    .img-container{
+      min-width: 100%;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .img-container img{
+      object-fit: cover;
+      border-radius: 16px;
+      width: 100%;
+    }
+    .change-button{
+      width: 3.5em;
+      height: 3.5em;
+      top: 10px;
+      left: 10px;
+    }
+    .change-button i{
+      font-size: 17px;
+    }
+
 }
