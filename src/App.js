@@ -5,7 +5,7 @@ import {useEffect, useState} from 'react'
 
 function App() {
 
-  const [idValue, setIdValue] = useState(1)
+  const [idValue, setIdValue] = useState(null)
   useEffect( () => {
     randomValue()
   }, [])
